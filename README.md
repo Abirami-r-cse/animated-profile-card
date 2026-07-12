@@ -21,11 +21,11 @@ A responsive profile card built using HTML, CSS, and JavaScript.
 
 ### Light Mode
 
-![Light Mode](images/light-mode.png)
+![Light Mode](images/profile-card-light.png)
 
 ### Dark Mode
 
-![Dark Mode](images/dark-mode.png)
+![Dark Mode](images/profile-card-dark.png)
 
 ## What I Learned
 
