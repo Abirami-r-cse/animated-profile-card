@@ -1,0 +1,119 @@
+.card{
+    position: relative;
+    width: 300px;
+    padding: 20px;
+    gap:15px;
+    border-radius: 15px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    
+   box-shadow: 3px 3px 15px gray;
+   transition:  1s;
+}
+html,body{
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #667eea,#764ba2);
+   }
+   .notification{
+        position:absolute;
+        top: 10px;
+        right:10px;
+        animation: ring 2s infinite;
+        transform-origin: top center;
+   }
+   @keyframes ring{
+    0%{
+        transform: rotate(0deg);
+    }
+
+    25%{
+        transform: rotate(15deg);
+    }
+
+    50%{
+        transform: rotate(-15deg);
+    }
+
+    75%{
+        transform: rotate(15deg);
+    }
+
+    100%{
+        transform: rotate(0deg);
+    }
+}
+   .card:hover{
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 3px 3px 15px black;
+
+   }
+   .button{
+    background: linear-gradient(to right, #667eea, #764ba2);
+    padding:10px 25px;
+    border-radius:20px ;
+    cursor: pointer;
+    
+    transition:  0.3s;
+    color: white;
+    border: none;
+   }
+   .button:hover{
+        background-color: darkblue;
+        transform:  translatY(-3px) scale(1.05);
+        box-shadow: 3px 3px 15px black;
+        animation: grow 1s infinite;
+   }
+   @keyframes grow{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.2);
+    }
+   }
+   .profile{
+    width:60px;
+    height:60px;
+    background-color:white;
+    border:1px solid black;
+    border-radius:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+   .profile img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+   }
+   .skills{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    
+   }
+   .skills span{
+        background-color: bisque;
+        padding: 5px 10px;
+        border-radius: 15px;
+   }
+   .following{
+    background: green;
+   }
+   .request{
+    background: orange;
+   }
+   .dark .card{
+    background: #1e1e1e;
+    color: white;
+}
+.dark{
+    background: #1e1e1e;
+    color: white;
+}
