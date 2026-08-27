@@ -2,6 +2,8 @@
 let button= document.getElementById("followBtn");
 let themeBtn= document.getElementById("themeBtn");
 let body=document.querySelector("body");
+let email = document.getElementById("emailText");
+let copyBtn = document.getElementById("copyBtn");
 let role = document.querySelector(".role");
 let roles = ["PSG iTech","CSE Student","Frontend Learner"];
 let currentRole = 0;
@@ -19,7 +21,21 @@ if(saved === "dark"){
     themeBtn.textContent = "☀️ Light Mode";
 }
 
+copyBtn.addEventListener("click", function () {
 
+    let copiedText = email.textContent;
+
+    navigator.clipboard.writeText(copiedText);
+
+    copyBtn.textContent = "✅ Copied!";
+
+    setTimeout(function () {
+
+        copyBtn.textContent = "📋 Copy Email";
+
+    }, 2000);
+
+});
 function updateButton(text,className){
     button.textContent=text;
     button.classList.remove("following");
